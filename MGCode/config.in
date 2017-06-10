@@ -1,0 +1,12 @@
+InMusica
+
+    loop(2,3,4,C){....}
+
+    SET miTiempo = 4;
+
+    Prinicpal{
+         loop()
+        
+    }
+
+Fin Musica

@@ -23,6 +23,16 @@
 "FinEnCaso"                  {return FINENCASO;}
 "Ejecute"                    {return EJECUTE;}
 "Silenc"                     {return SILENC;}
+"ValorInicial"               {return VALOR_INICIAL;}
+"Salto"                      {return SALTO;}
+"ValorMaximo"                {return VALOR_MAXIMO;}
+"CantidadReiteros"           {return CANTIDAD_REITEROS;}
+"Contador"                   {return CONTADOR;}
+"Variable"                   {return VARIABLE;}
+"Operador"                   {return OPERADOR;}
+"Valor"                      {return VALOR;}
+"Entonces"                   {return ENTONCES;}
+
 
 [A-G][#][m][^]               {yylval.id = yytext[0]; return NOTE;}
 
@@ -31,7 +41,7 @@
 [ \t\n]                      ;
 '/*'                         ;
 [-+=;<>]           	         {return yytext[0];}
-.                            {ECHO; yyerror ("unexpected character");}
+.                            {ECHO; yyerror ("Lexical ERROR, the character is not valid in this language.");}
 
 %%
 int yywrap (void) {return 1;}
