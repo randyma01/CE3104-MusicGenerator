@@ -26,15 +26,10 @@ char *names[] =
 "FinEnCaso",
 "Ejecute",
 "Silenc",
-"ValorInicial",
-"Salto",
-"ValorMaximo",
-"CantidadReiteros",
-"Contador",
-"Variable",
-"Operador",
-"Valor",
-"Entonces"};
+"Entonces",
+"Note"
+"Identifier",
+"Number"};
 
 int main(void) 
 {
@@ -42,36 +37,31 @@ int main(void)
 	int ntoken, vtoken, rtoken, stoken, ttoken, ktoken, atoken;
 
 	ntoken = yylex();
+
 	while(ntoken) {
 		if(yylex() != INIMUSICA){
 			printf("Syntax ERROR in line %d.  Expect to start with 'IniMusica' but found %s\n", yylineno, yytext);
 			return 1;
-}
 		}
 		vtoken = yylex();
-		/*rtoken = yylex();
-		stoken = yylex();
-		ttoken = yylex();
-		ktoken = yylex();
-		atoken = yylex();*/
 
 		switch (ntoken) {
 
-			case DEF: 
+			case DEF:
+				printf("Encontré un DEF: ¡hurray!"); 
 
-			case SET: 
-
+			case SET:
+				printf("Encontré un SEF: ¡hurray!"); 
+ 
 			case LOOP:
-				switch(vtoken){
-					case EnCaso:
-					case Entonces:
-
-				} 
+				printf("Encontré un LOOP: ¡qué violento!"); 
 
 			case PRINCIPAL:
-			
-			
+				printf("Encontré un bloque Principal: ¡Genial!");
+				
 			case FINMUSICA:
+				printf("Encontré el token FunMusica: ¡He terminado SÍ!");
+				break;
 
 			default:
 				printf("Syntax ERROR in line %d\n",yylineno);
