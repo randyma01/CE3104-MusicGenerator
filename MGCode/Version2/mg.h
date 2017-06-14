@@ -20,10 +20,16 @@
 #define ENTONCES 20
 #define INICIO 21
 #define FINAL 22
-#define NOTE 23
-#define FUNC 24
-#define IDENTIFIER 25
-#define NUMBER 26
+#define NOTA 23
+#define NOTA_SOSTENIDA 24
+#define ACORDE_MAYOR 25
+#define ACORDE_MAYOR_SOSTENIDO 26
+#define ACORDE_MENOR 28
+#define ACORDE_MENOR_SOSTENIDO 29
+#define FUNC 30
+#define IDENTIFIER 31
+#define NUMBER 32
+
 
 
 
