@@ -32,7 +32,6 @@
 #define PARENTESIS_IZQ 33
 #define PARENTESIS_DER 34
 
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <string>
@@ -40,7 +39,6 @@
 #include <vector>
 #include <iostream>
 #include <fstream>
-
 
 extern int yylex();
 extern int yylineno;
