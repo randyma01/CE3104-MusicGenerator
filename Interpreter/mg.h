@@ -29,8 +29,27 @@
 #define FUNC 30
 #define IDENTIFIER 31
 #define NUMBER 32
+#define PARENTESIS_IZQ 33
+#define PARENTESIS_DER 34
 
 
+#include <stdlib.h>
+#include <stdio.h>
+#include <string>
+#include <cstring>
+#include <vector>
+#include <iostream>
+#include <fstream>
 
+
+extern int yylex();
+extern int yylineno;
+extern char* yytext;
+
+using namespace std;
+
+extern std::fstream  ofstream;
+
+std::ofstream codeFile;
 
 
