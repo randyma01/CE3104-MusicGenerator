@@ -29,6 +29,8 @@
 #define FUNC 30
 #define IDENTIFIER 31
 #define NUMBER 32
+#define PARENTESIS_IZQ 33
+#define PARENTESIS_DER 34
 
 
 
