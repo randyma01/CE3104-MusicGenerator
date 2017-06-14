@@ -28,13 +28,22 @@
 "Inicio"                     {return INICIO;}
 "Final"                      {return FINAL;}
 
-[A-Z][#][m]*                 {return NOTE;}
+[A-Z][Nota]                  {return NOTA;}
+[A-Z][Nota][#]               {return NOTA_SOSTENIDA}
+[A-Z][M]                     {return ACORDE_MAYOR}
+[a-z][M][#]                  {return ACORDE_MAYOR_SOSTENIDO}
+[A-Z][m]                     {return ACORDE_MENOR}
+[A-Z][m][#]                  {return ACORDE_MENOR_SOSTENIDO}
+
+[(]                          {return PARENTESIS_IZQ}
+[)]                          {return PARENTESIS_DER}
+[/*]                         ;
 [a-zA-Z][(][)]               {return FUNC;}
 [a-zA-Z]			         {return IDENTIFIER;}
 [0-9]+                       {return NUMBER;}
 [ \t\n]                      ;
-[-+=;]           	         {return yytext[0];}
-.                            {printf("Lexical ERROR in line %d, the character is not valid in this language\n",  yylineno);}
+[-+=,;]           	         {return yytext[0];}
+.                            {printf("Lexical ERROR in line %d, the character is not valid in this language.\n",  yylineno);}
 
 %%
-int yywrap (void) {return 1;}2
+int yywrap (void) {return 1;}
