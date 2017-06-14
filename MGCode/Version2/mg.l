@@ -29,17 +29,17 @@
 "Final"                      {return FINAL;}
 
 [A-Z][Nota]                  {return NOTA;}
-[A-Z][Nota][#]               {return NOTA_SOSTENIDA}
-[A-Z][M]                     {return ACORDE_MAYOR}
-[a-z][M][#]                  {return ACORDE_MAYOR_SOSTENIDO}
-[A-Z][m]                     {return ACORDE_MENOR}
-[A-Z][m][#]                  {return ACORDE_MENOR_SOSTENIDO}
+[A-Z][Nota][#]               {return NOTA_SOSTENIDA;}
+[A-Z][M]                     {return ACORDE_MAYO;}
+[a-z][M][#]                  {return ACORDE_MAYOR_SOSTENID;}
+[A-Z][m]                     {return ACORDE_MENOR;}
+[A-Z][m][#]                  {return ACORDE_MENOR_SOSTENIDO;}
 
-[(]                          {return PARENTESIS_IZQ}
-[)]                          {return PARENTESIS_DER}
+[(]                          {return PARENTESIS_IZQ;}
+[)]                          {return PARENTESIS_DER;}
 [/*]                         ;
 [a-zA-Z][(][)]               {return FUNC;}
-[a-zA-Z]			         {return IDENTIFIER;}
+[a-zA-Z]			               {return IDENTIFIER;}
 [0-9]+                       {return NUMBER;}
 [ \t\n]                      ;
 [-+=,;]           	         {return yytext[0];}
