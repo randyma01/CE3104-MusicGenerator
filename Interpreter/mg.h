@@ -43,11 +43,12 @@
 extern int yylex();
 extern int yylineno;
 extern char* yytext;
+extern int yyleng;
+extern FILE *yyin;
 
 using namespace std;
 
 extern std::fstream  ofstream;
-
-std::ofstream codeFile;
-
-
+extern std::fstream  ifstream;
+extern std::string   string;
+extern std::vector<void>  vector;
