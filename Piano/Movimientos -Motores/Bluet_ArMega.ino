@@ -16,11 +16,17 @@ Servo motorLaS;
 Servo motorSi;
 
 void setup() {
-  // put your setup code here, to run once:
- // Serial.begin(9600);
-//  HC05.begin(9600);
+  /*
+   * Bluetooth
+   */
+  // Serial.begin(9600);
+  //  HC05.begin(9600);
+ // String stringTwo =  String("This is a string");
   
-  motorDo.attach(1);
+  /*
+   * Motores
+   */
+ motorDo.attach(1);
   motorDoS.attach(2);
   motorRe.attach(3);
   motorReS.attach(4);
@@ -32,39 +38,41 @@ void setup() {
   motorLa.attach(10);
   motorLaS.attach(11);
   motorSi.attach(12);
+  
 
   moverMotores();
+
 }
 
 
 void loop() {
+
+
+
+  
+
+  /*
   mvDo(500);
-
   mvDoS(500);
-
   mvRe(500);
-
   mvReS(500);
-
   mvMi(500);
-
   mvFa(500);
-
   mvFaS(500);
-
   mvSol(500);
-
   mvSolS(500);
-
   mvLa(500);
-
   mvLaS(500);
-
   mvSi(500);
-  //mvDo();
-  //delay(2000);
+  */
 }
 
+
+/*
+ * Declarar el valor inicial
+ * En 90 grados para la posicion 
+ * de los motores con respecto a la tecla
+ */
 void moverMotores(){
   motorDo.write(90);
   motorDoS.write(175);
@@ -79,6 +87,11 @@ void moverMotores(){
   motorLaS.write(35);
   motorSi.write(20);
 }
+
+
+
+
+//----------------------- Funcion del motor para su respectiva nota -----------------------\\
 
 
 void mvDo(int tiempo){
@@ -196,4 +209,3 @@ void mvSi(int tiempo){
 
   delay(200);
 }
-
