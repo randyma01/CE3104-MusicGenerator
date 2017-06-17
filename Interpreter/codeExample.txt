@@ -1,0 +1,11 @@
+INIMUSICA
+    
+    DEF
+    
+    SET
+    
+    LOOP
+
+    PRINCIPAL
+
+FINMUSICA
